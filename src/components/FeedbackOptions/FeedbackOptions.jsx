@@ -6,7 +6,6 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
       {opt.map((name, index) => {
-        // console.log(name, index);
         return (
           <Btn
             key={index}
@@ -22,9 +21,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   );
 };
 
-// FeedbackOptions.propTypes = {
-//   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-//   onLeaveFeedback: PropTypes.func.isRequired,
-// };
+FeedbackOptions.propTypes = {
+  options: PropTypes.shape(PropTypes.string.isRequired).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default FeedbackOptions;
